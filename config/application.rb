@@ -22,9 +22,20 @@ module Rebus
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales',
+                                                 '**', '*.yml')]
+    config.i18n.enforce_available_locales = false
+    config.i18n.available_locales = %i[sv en]
+    config.i18n.default_locale = :sv
+    config.time_zone = 'Stockholm'
+
+    config.generators do |g|
+      g.scaffold_stylesheet false
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.test_unit false
+      g.resource_route false
+    end
   end
 end

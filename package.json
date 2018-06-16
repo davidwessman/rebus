@@ -2,9 +2,12 @@
   "name": "rebus",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5"
+    "@rails/webpacker": "3.5",
+    "rails-ujs": "^5.2.0",
+    "turbolinks": "^5.1.1"
   },
   "devDependencies": {
+    "tailwindcss": "^0.5.3",
     "webpack-dev-server": "2.11.2"
   }
 }
