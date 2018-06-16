@@ -13,5 +13,3 @@ const Turbolinks = require('turbolinks');
 
 Rails.start();
 Turbolinks.start();
-
-import 'application'
