@@ -1,0 +1,27 @@
+<section class="flex flex-grow items-stretch flex-col">
+  <div class="flex flex-grow flex-shrink items-center">
+    <div class="w-full lg:w-1/2 mx-auto bg-white-transparent text-center rounded-lg px-3 py-6 my-6">
+      <div class="mb-4 text-lg">
+        <h1 class="font-bold"><%= @post.title %></h1>
+      </div>
+      <div id="status">
+      </div>
+      <div class="mb-6 text-xl">
+        <%= form_with(model: [@post, @question], class: 'w-full', local: true) do |f| %>
+          <div class="mb-6">
+            <%= f.label(:title, @question.title, class: 'label') %>
+            <div class="relative">
+              <%= f.text_field(:guess, autofocus: true,
+                               class: 'shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3 leading-tight') %>
+            </div>
+            <% if (msg = @question.guess_error) %>
+            <p class="text-red text-m italic">
+              <%= msg[0] %>
+            </p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

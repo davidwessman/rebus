@@ -1,2 +1,9 @@
 @tailwind preflight;
+.button {
+  @apply .px-3 .py-2 .border .rounded .no-underline;
+
+  &:hover {
+    @apply .bg-grey-lighter;
+  }
+}
 @tailwind utilities;

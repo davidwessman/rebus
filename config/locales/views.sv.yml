@@ -6,3 +6,9 @@ sv:
     root:
       title: Rebus
       welcome: Välkommen till denna problemlösning. På slutet finns ditt svar!
+  posts:
+    show:
+      begin: Börja!
+  questions:
+    show:
+      return: Tillbaka
